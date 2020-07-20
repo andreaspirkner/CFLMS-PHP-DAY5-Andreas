@@ -61,7 +61,7 @@
         $sql = "INSERT INTO booking (booking_date_start, booking_date_end, fk_user_Id, fk_car_id) VALUES ('$booking_date_start', '$booking_date_end', $userId, $carId)";
         $sql2 = "UPDATE cars SET availability = 'no' WHERE id = $carId";
        if (mysqli_query($conn, $sql) && mysqli_query($conn,$sql2) ){
-           echo "<h3>Booking success!!!</h3> <hr> <button class='btn btn-dark border border-dark>><a href='home.php'>Home</a></button><br>";
+           echo "<h3>Booking success!!!</h3> <hr> <a href= 'home.php'><button class='btn btn-dark border border-dark' type='button'>Back</button></a><br>";
        }else  {
        echo "Error " . $sql . ' ' . $conn->conn_error;
    }
