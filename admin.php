@@ -46,14 +46,25 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="admin.php">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="create.php">Create</a>
+            <a class="nav-link" href="admin.php">Admin</a>
         </li>
          <li class="nav item">
-            <a class="nav-link" href="admin.php">Admin</a>
+            <a class="nav-link" href="create.php">Create</a>
          </li>
+         <li class="nav item">
+            <a class="nav-link" href="show_bookings.php">Show Bookings</a>
+         </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Availability
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="show_availability.php">No</a>
+          <a class="dropdown-item" href="show_availability_y.php">Yes</a>
+      </li>
         </ul>
     </div>
     <a class="btn btn-danger border border-white" href="logout.php?logout">Logout</a>
@@ -72,29 +83,6 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
             <!--CREATE-->
         <div class="card border-dark">
            <h3>Hi <?php echo $userRow['userName' ]; ?></h3><hr>
-
-           <a href="create.php"><button class='btn btn-success border border-dark' type='button'>Create</button></a><hr>
-           
-           <a  href="logout.php?logout"><button class='btn btn-danger border border-dark' type='button'>Sign Out</button></a><br><hr>
-
-           <!--<?php
-           if($resCar->num_rows == 0 ){
-			echo "No result";
-		}elseif($resCar->num_rows == 1){
-			$row = $resCar->fetch_assoc();
-			echo $row["model"]. " ". $row["location"]." ".$row["price"]. " ".$row["availability"];
-		}else {
-			$rows = $resCar->fetch_all(MYSQLI_ASSOC);
-			foreach ($rows as $value) {
-				echo $value["car_id"]. " ----- " .$value["model"]. " ". $value["location"]." ".$value["price"]. " ".$value["availability"]."<br>";
-			}
-		}
-
- 		?>-->
-		
-       		
-
- 
       </div><!--END ADMIN-->
     </div><!--END ROW-->
 </div><!--END PARALLAX 2-->
@@ -150,14 +138,17 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="home.php">Home</a><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="admin.php">Home</a><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="create.php">Create</a>
-        </li>
-         <li class="nav-item">
             <a class="nav-link" href="admin.php">Admin</a>
         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="create.php">Create</a>
+        </li>
+         <li class="nav item">
+            <a class="nav-link" href="show_bookings.php">Show Bookings</a>
+         </li>
         <li class="nav-item">
             <a class="nav-link" href="mailto:andreas.pirkner@gmx.net" >Andreas Pirkner 2020</a>
         </li> 

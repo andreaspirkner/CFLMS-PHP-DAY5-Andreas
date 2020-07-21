@@ -37,14 +37,25 @@ if(isset($_SESSION["user"])){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="admin.php">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="create.php">Create</a>
+            <a class="nav-link" href="admin.php">Admin</a>
         </li>
          <li class="nav item">
-            <a class="nav-link" href="admin.php">Admin</a>
+            <a class="nav-link" href="create.php">Create</a>
          </li>
+         <li class="nav item">
+            <a class="nav-link" href="show_bookings.php">Show Bookings</a>
+         </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Availability
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="show_availability.php">No</a>
+          <a class="dropdown-item" href="show_availability_y.php">Yes</a>
+      </li>
         </ul>
     </div>
     <a class="btn btn-danger border border-white" href="logout.php?logout">Logout</a>
@@ -124,14 +135,17 @@ if(isset($_SESSION["user"])){
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="home.php">Home</a><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="admin.php">Home</a><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="create.php">Create</a>
-        </li>
-         <li class="nav-item">
             <a class="nav-link" href="admin.php">Admin</a>
         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="create.php">Create</a>
+        </li>
+         <li class="nav item">
+            <a class="nav-link" href="show_bookings.php">Show Bookings</a>
+         </li>
         <li class="nav-item">
             <a class="nav-link" href="mailto:andreas.pirkner@gmx.net" >Andreas Pirkner 2020</a>
         </li> 
