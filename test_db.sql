@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 20. Jul 2020 um 16:04
+-- Erstellungszeit: 21. Jul 2020 um 15:18
 -- Server-Version: 10.4.13-MariaDB
 -- PHP-Version: 7.4.7
 
@@ -47,20 +47,8 @@ INSERT INTO `booking` (`booking_id`, `booking_date_start`, `booking_date_end`, `
 (3, '2020-07-22', '2020-07-24', 2, 4),
 (4, '2020-07-22', '2020-07-24', 2, 4),
 (5, '2020-07-22', '2020-07-25', 2, 4),
-(6, '2020-07-23', '2020-07-26', 2, 4),
-(7, '2020-07-30', '2020-08-05', 2, 1),
-(8, '2020-07-30', '2020-08-05', 2, 1),
-(9, '2020-07-23', '2020-07-31', 2, 4),
-(10, '2020-07-31', '2020-07-24', 2, 5),
-(11, '2020-07-23', '2020-07-25', 2, 1),
-(12, '2020-07-23', '2020-07-25', 2, 1),
-(13, '2020-07-23', '2020-07-25', 2, 1),
-(14, '2020-07-24', '2020-07-31', 2, 1),
-(15, '2020-07-24', '2020-07-31', 2, 1),
-(16, '2020-07-24', '2020-07-31', 2, 1),
-(17, '2020-07-24', '2020-07-31', 2, 1),
-(18, '2020-07-24', '2020-07-31', 2, 1),
-(19, '2020-07-24', '2020-07-25', 2, 4);
+(26, '2020-07-23', '2020-07-25', 2, 1),
+(27, '2020-07-23', '2020-07-25', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -84,14 +72,10 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`id`, `brand`, `model`, `location`, `availability`, `price`, `picture`, `active`) VALUES
-(1, 'Chrysler', 'Neon', '1220 Wien', 'no', 79, 'img/neon.jpg', 0),
-(4, 'Dodge', 'Caliber', '1050 Wien', 'no', 89, 'img/caliber.jpg', 0),
+(1, 'Chrysler', 'Neon', '1220 Wien', 'yes', 79, 'img/neon.jpg', 0),
+(4, 'Dodge', 'Caliber', '1050 Wien', 'yes', 89, 'img/caliber.jpg', 0),
 (5, 'Ram', 'Heavy Duty', '1130 Wien', 'yes', 170, 'img/ram.jpg', 0),
-(6, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0),
-(7, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0),
-(8, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0),
-(9, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0),
-(10, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0);
+(7, 'Chrysler', '300', '1220 Wien', 'yes', 129, 'img/c300.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -113,7 +97,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `userName`, `userEmail`, `userPass`, `status`) VALUES
 (1, 'Andreas', 'andreas.pirkner@gmx.net', 'b89f393ec9cb8be763d21a51c214bdd79bf5b7ef41d673697c8e1406168aebfc', 'admin'),
-(2, 'Andreas Test User', 'chilloutpi@gmx.at', 'b89f393ec9cb8be763d21a51c214bdd79bf5b7ef41d673697c8e1406168aebfc', 'user');
+(2, 'Andreas Test User', 'chilloutpi@gmx.at', 'b89f393ec9cb8be763d21a51c214bdd79bf5b7ef41d673697c8e1406168aebfc', 'user'),
+(3, 'Test Two', 'test2@gmail.com', 'b89f393ec9cb8be763d21a51c214bdd79bf5b7ef41d673697c8e1406168aebfc', 'user'),
+(4, 'Test One', 'test1@gmail.com', 'b89f393ec9cb8be763d21a51c214bdd79bf5b7ef41d673697c8e1406168aebfc', 'user');
 
 --
 -- Indizes der exportierten Tabellen
@@ -146,19 +132,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT für Tabelle `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
